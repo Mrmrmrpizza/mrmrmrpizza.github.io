@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #warpButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        #text {
+            font-size: 20px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<button id="warpButton" onclick="warpText()">Click Me</button>
+<h1 id="text">Peter Piper picked a peck of pickled peppers</h1>
+
+<script>
+    function warpText() {
+        let button = document.getElementById("warpButton");
+        let text = document.getElementById("text");
+
+        button.classList.add("hidden");
+        setTimeout(() => {
+            button.style.display = "none";
+            text.style.opacity = "1";
+            text.style.transform = "scale(1)";
+        }, 500);
+    }
+</script>
+</body>
+</html>
