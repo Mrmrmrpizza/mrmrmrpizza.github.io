@@ -61,6 +61,7 @@ textEntryBox.addEventListener("keydown", (event) => {
 projectsButton.onclick = () => projectsContainer.classList.toggle("hidden");
 projectsBackButton.onclick = () => projectsContainer.classList.add("hidden");
 
+
 aboutButton.onclick = () => {
   if (aboutButton.classList.contains("expanded")) {
     aboutButton.classList.remove("expanded");
